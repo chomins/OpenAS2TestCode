@@ -1,0 +1,24 @@
+Headers:
+Date: 월, 13 9월 2021 09:39:00 +0900
+From: as2msgs@openas2.com
+Message-ID: <OPENAS2-13092021093900+0900-89e038b1-7746-40fc-a1c6-f231a764000a@PartnerA_OID_MyCompany_OID>
+Subject: Your Requested MDN Response re: AS2 test message from as2-lib
+Mime-Version: 1.0
+Content-Type: multipart/signed; protocol="application/pkcs7-signature"; micalg=sha-256;  boundary="----=_Part_1_1933410274.1631493540195"
+AS2-To: PartnerA_OID
+AS2-From: MyCompany_OID
+AS2-Version: 1.1
+Connection: close, TE
+User-Agent: NO MANIFEST vNO MANIFEST
+Server: NO MANIFEST vNO MANIFEST
+Content-Length: 2235
+
+Attributes:
+FINAL_RECIPIENT: rfc822; MyCompany_OID
+MIC: zwhnK8p912wnYm25V9yMb4JL4rzcDzQ2cdpQJaHfZNQ=, sha-256
+REPORTING_UA: NO MANIFEST vNO MANIFEST@/127.0.0.1:10080
+ORIGINAL_MESSAGE_ID: <13092021093858+0900-9106@PartnerA_OID_MyCompany_OID>
+ORIGINAL_RECIPIENT: rfc822; MyCompany_OID
+DISPOSITION: automatic-action/MDN-sent-automatically; processed
+Text:
+The message sent to Recipient MyCompany_OID on Mon, 13 Sep 2021 09:38:59 +0900 with Subject AS2 test message from as2-lib has been received, the EDI Interchange was successfully decrypted and it's integrity was verified. In addition, the sender of the message, Sender PartnerA_OID at Location /127.0.0.1 was authenticated as the originator of the message. There is no guarantee however that the EDI Interchange was syntactically correct, or was received by the EDI application/translator.

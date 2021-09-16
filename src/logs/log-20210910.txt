@@ -1,0 +1,9 @@
+2021-09-10 09:02:25.332 FINE XMLSession: Logger is disabled ... ignoring: org.openas2.logging.SocketLogger
+2021-09-10 09:02:25.383 FINE XMLSession: Loading command processor(s)...
+2021-09-10 09:02:25.393 FINE XMLSession: Command processor is disabled ... ignoring: org.openas2.cmd.processor.SocketCommandProcessor
+2021-09-10 09:02:25.394 FINE XMLSession: Command processor is disabled ... ignoring: org.openas2.cmd.processor.RestCommandProcessor
+2021-09-10 09:02:25.405 FINE XMLSession: Loading processor modules...
+2021-09-10 09:02:25.526 FINE XMLSession: Module is disabled ... ignoring: <module classname="org.openas2.processor.receiver.AS2ReceiverModule" enabled="$properties.module.AS2ReceiverModule.https.enabled$" errordir="$properties.storageBaseDir$/inbox/error" errorformat="sender.as2_id, receiver.as2_id, headers.message-id" port="10443" protocol="https" ssl_keystore="%home%/ssl_certs.jks" ssl_keystore_password="testas2" ssl_protocol="TLS"/>
+2021-09-10 09:02:25.532 FINE XMLSession: Module is disabled ... ignoring: <module classname="org.openas2.processor.receiver.AS2MDNReceiverModule" enabled="$properties.module.AS2MDNReceiverModule.https.enabled$" port="10444" protocol="https" ssl_keystore="%home%/ssl_certs.jks" ssl_keystore_password="testas2" ssl_protocol="TLS"/>
+2021-09-10 09:02:25.564 FINE XMLSession: Module is disabled ... ignoring: <module classname="org.openas2.processor.receiver.HealthCheckModule" enabled="$properties.module.HealthCheckModule.enabled$" port="10099"/>
+2021-09-10 09:02:25.574 FINER SchedulerComponent: Scheduler module is ready.

@@ -1,0 +1,46 @@
+2021-09-09 17:32:31.578 FINE XMLSession: Logger is disabled ... ignoring: org.openas2.logging.SocketLogger
+2021-09-09 17:32:31.589 FINE XMLSession: Loading command processor(s)...
+2021-09-09 17:32:31.593 FINE XMLSession: Command processor is disabled ... ignoring: org.openas2.cmd.processor.SocketCommandProcessor
+2021-09-09 17:32:31.594 FINE XMLSession: Command processor is disabled ... ignoring: org.openas2.cmd.processor.RestCommandProcessor
+2021-09-09 17:32:31.597 FINE XMLSession: Loading processor modules...
+2021-09-09 17:32:31.634 FINE XMLSession: Module is disabled ... ignoring: <module classname="org.openas2.processor.receiver.AS2ReceiverModule" enabled="$properties.module.AS2ReceiverModule.https.enabled$" errordir="$properties.storageBaseDir$/inbox/error" errorformat="sender.as2_id, receiver.as2_id, headers.message-id" port="10443" protocol="https" ssl_keystore="%home%/ssl_certs.jks" ssl_keystore_password="testas2" ssl_protocol="TLS"/>
+2021-09-09 17:32:31.635 FINE XMLSession: Module is disabled ... ignoring: <module classname="org.openas2.processor.receiver.AS2MDNReceiverModule" enabled="$properties.module.AS2MDNReceiverModule.https.enabled$" port="10444" protocol="https" ssl_keystore="%home%/ssl_certs.jks" ssl_keystore_password="testas2" ssl_protocol="TLS"/>
+2021-09-09 17:32:31.638 FINE XMLSession: Module is disabled ... ignoring: <module classname="org.openas2.processor.receiver.HealthCheckModule" enabled="$properties.module.HealthCheckModule.enabled$" port="10099"/>
+2021-09-09 17:32:31.650 FINE OpenAS2Server: Shutdown hook registered.
+2021-09-09 17:32:31.651 FINE OpenAS2Server: Starting OpenAS2 Server v2.11.0...
+2021-09-09 17:32:31.653 FINE DefaultProcessor: AS2DirectoryPollingModule started.
+2021-09-09 17:32:31.654 FINE DefaultProcessor: AS2DirectoryPollingModule started.
+2021-09-09 17:32:31.655 FINE DefaultProcessor: AS2DirectoryPollingModule started.
+2021-09-09 17:32:31.685 ERROR OpenAS2Exception: Error occurred:: Exception opening port "9092" (port may be in use), cause: "java.net.BindException: Address already in use (Bind failed)" [90061-197]
+    Sources: {}
+org.openas2.OpenAS2Exception: Failed to start TCP server
+	at org.openas2.processor.msgtracking.EmbeddedDBHandler.start(EmbeddedDBHandler.java:53)
+	at org.openas2.processor.msgtracking.DbTrackingModule.start(DbTrackingModule.java:265)
+	at org.openas2.processor.DefaultProcessor.startActiveModules(DefaultProcessor.java:82)
+	at org.openas2.BaseSession.start(BaseSession.java:31)
+	at org.openas2.app.OpenAS2Server.start(OpenAS2Server.java:54)
+	at org.openas2.app.OpenAS2Server$Builder.run(OpenAS2Server.java:102)
+	at org.openas2.app.OpenAS2Server.main(OpenAS2Server.java:49)
+Caused by: org.h2.jdbc.JdbcSQLException: Exception opening port "9092" (port may be in use), cause: "java.net.BindException: Address already in use (Bind failed)" [90061-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.util.NetUtils.createServerSocketTry(NetUtils.java:180)
+	at org.h2.util.NetUtils.createServerSocket(NetUtils.java:146)
+	at org.h2.server.TcpServer.start(TcpServer.java:229)
+	at org.h2.tools.Server.start(Server.java:482)
+	at org.openas2.processor.msgtracking.EmbeddedDBHandler.start(EmbeddedDBHandler.java:51)
+	... 6 more
+Caused by: java.net.BindException: Address already in use (Bind failed)
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.ServerSocket.bind(ServerSocket.java:390)
+	at java.net.ServerSocket.<init>(ServerSocket.java:252)
+	at java.net.ServerSocket.<init>(ServerSocket.java:143)
+	at org.h2.util.NetUtils.createServerSocketTry(NetUtils.java:176)
+	... 10 more
+2021-09-09 17:32:53.929 FINE DefaultProcessor: AS2DirectoryPollingModule stopped.
+2021-09-09 17:32:53.929 FINE DefaultProcessor: AS2DirectoryPollingModule stopped.
+2021-09-09 17:32:53.931 FINE DefaultProcessor: AS2DirectoryPollingModule stopped.
+2021-09-09 17:32:53.932 FINE DefaultProcessor: 3 active module(s) stopped.
+2021-09-09 17:32:53.933 FINE OpenAS2Server: OpenAS2 has shut down
+
