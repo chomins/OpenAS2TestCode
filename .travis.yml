@@ -1,0 +1,27 @@
+notifications:
+  email: false
+env:
+  global:
+    - OPENAS2_FILE_SYSTEM_RUN=False
+matrix:
+  include:
+    - os: linux
+      dist: xenial
+      language: java
+      before_install:
+        - sudo apt-get update
+        - sudo apt list | grep jdk
+        - sudo apt-get -y install openjdk-8-jdk-headless
+        - sudo update-alternatives --display java
+      script: ./mvnw test
+    - os: windows
+      language: shell
+      before_install:
+        - choco install openjdk
+        - choco install maven
+        - proj_dir=$(pwd)
+        - cd "C:\Program Files\OpenJDK"
+        - cd $(ls)
+        - export JAVA_HOME=$(pwd)
+        - cd $proj_dir
+      script: ./mvnw test

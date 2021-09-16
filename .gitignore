@@ -1,2 +1,12 @@
-/logs/
-/target/
+/bin/
+/classes/
+/tests/
+/lib/
+*.iml
+.idea/*
+.project
+.classpath
+pom.xml.versionsBackup
+*/dist/*
+**/target/**/*
+/Bundle/target/
